@@ -1,0 +1,598 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+    padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+    list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+    margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+/* Обнуление стилей завершено */
+
+html, body {
+    width: 100vw;
+    height: 100%;
+    font-family: 'Lato', sans-serif;
+    overflow-x: hidden;
+
+}
+
+.container {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-us {
+
+    width: 100%;
+    height: 872px;
+
+    padding-top: 80px;
+    padding-bottom: 100px;
+    background: #FFFFFF;
+}
+
+.title {
+    font-family: 'Baron Neue', sans-serif;
+    font-size: 36px;
+    line-height: 44px;
+    color: #333333;
+
+}
+
+.about-us__title {
+
+
+    width: 527px;
+    margin-bottom: 60px;
+
+}
+
+.about-us__content {
+
+    position: relative;
+    background: #F4F5F5;
+
+    display: flex;
+
+    padding-top: 70px;
+    height: 494px;
+}
+
+.about-us__info {
+    display: flex;
+    row-gap: 60px;
+    display: flex;
+}
+
+.about-us__menu {
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.about-us__menu-item-title {
+    white-space: nowrap;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 24px;
+    margin-bottom: 6px;
+
+
+    color: #303030;
+}
+
+.about-us__menu-item-subtitle {
+    white-space: nowrap;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+
+    color: #777777;
+}
+
+.about-us__description {
+
+    width: 320px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+
+
+    color: #303030;
+}
+
+.about-us__menu-item-span {
+    line-height: 24px;
+    font-size: 16px;
+
+}
+
+.about-us__main-image {
+    position: absolute;
+    right: 0;
+    top: -177px;
+    width: 615px;
+    height: 480px;
+}
+
+.about-us__image {
+    display: flex;
+
+    justify-content: center;
+    background-blend-mode: normal, multiply, normal;
+    width: 232px;
+    min-height: 210px;
+    background: url('../img/book.png'), #C79791;
+    background-position-y: -40px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+
+}
+
+.about-us__image-2 {
+    background-color: #484848;
+}
+
+.about-us__image-group {
+
+    display: flex;
+    gap: 31px;
+    position: absolute;
+    bottom: -49px;
+    right: 120px;
+}
+
+.about-us__image-title {
+    margin-top: 50%;
+    width: 182px;
+    height: 60px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.about-us__find-more {
+    display: inline-block;
+    font-family: 'Baron Neue';
+    font-size: 18px;
+    line-height: 22px;
+    border-bottom: #7A1B1B 2px solid;
+    text-align: center;
+    display: none;
+    color: #7A1B1B;
+}
+
+.on-map {
+
+
+    height: 610px;
+
+
+}
+
+.on-map__menu {
+    margin-top: 40px;
+    margin-right: 90px;
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+}
+
+.on-map__map {
+    width: 930px;
+    height: 450px;
+}
+
+
+.on-map__content {
+
+    width: 100%;
+    display: flex;
+}
+
+.on-map__menu-item {
+    white-space: nowrap;
+    border-radius: 20px;
+    border: 1px solid rgba(199, 151, 145, 0.3);
+    line-height: 36px;
+    padding-left: 20px;
+    padding-right: 16px;
+    color: #303030;
+    font-weight: 400;
+    font-size: 11px;
+    text-transform: uppercase;
+}
+
+.on-map__menu-item-span {
+    display: inline-block;
+    text-align: center;
+    width: 18px;
+    font-weight: 700;
+    color: #7A1B1B;
+}
+
+.on-map__menu-item-wrap {
+    display: flex;
+}
+
+.features {
+    height: 526px;
+    padding-top: 80px;
+
+}
+
+.features__subtitle {
+
+    font-family: 'Baron Neue';
+    font-size: 22px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 55px;
+    color: #08131F;
+}
+
+.features__carousel-item {
+
+    padding-top: 75px;
+    width: 294px;
+    min-height: 252px;
+
+    position: relative;
+}
+
+.features__carousel {
+    position: relative;
+    width: 100%;
+
+}
+
+.features__carousel-content {
+    right: 0;
+    transition: 0.2s;
+    gap: 120px;;
+    position: relative;
+    display: flex;
+    width: 10000px;
+}
+
+.features__carousel-item-content {
+    position: relative;
+    z-index: 1;
+    background: #fff;
+}
+
+.features__carousel-item-description {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #333333;
+    margin-bottom: 25px;
+}
+
+.features__carousel-item-title {
+    margin-bottom: 16px;
+    font-family: 'Baron Neue';
+    font-size: 22px;
+    line-height: 30px;
+    color: #08131F;
+}
+
+.features__carousel-item-button {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+
+    padding: 0;
+
+
+    background: transparent;
+    border: transparent;
+
+    color: #7A1B1B;
+}
+
+.features__carousel-item-num {
+    top: 0;
+    z-index: 0;
+    font-family: 'Baron Neue';
+    font-size: 100px;
+    left: 0;
+    color: #7A1B1B;
+    line-height: 100px;
+    opacity: 0.1;
+    position: absolute;
+}
+
+.features__carouesel-buttons {
+    display: flex;
+    gap: 25px;
+    top: -104px;
+    right: 0;
+    position: absolute;
+}
+
+.arrow {
+    border-top-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+    display: inline-block;
+    border-left: 3px solid;
+    border-bottom: 3px solid;
+    width: 15px;
+    height: 15px;
+    border-color: #7A1B1B;
+    transition: 0.2s;
+}
+
+
+.arrow-left {
+    transform: rotate(45deg)
+}
+
+.arrow-right {
+    transform: rotate(225deg)
+}
+
+.arrow-right:hover {
+    transform: scale(1.2) rotate(225deg);
+}
+
+.arrow-right:active {
+    transform: scale(0.9) rotate(225deg);
+}
+
+.arrow-left:hover {
+    transform: scale(1.2) rotate(45deg);
+}
+
+.arrow-left:active {
+    transform: scale(0.9) rotate(45deg);
+}
+
+@media (max-width: 1440px) {
+    .container {
+        width: 687px;
+
+    }
+
+    .about-us {
+
+        padding-top: 60px;
+        min-height: 1441px;
+        height: unset;
+    }
+
+    .about-us__title {
+        margin-bottom: 50px;
+    }
+
+    .about-us__content {
+        min-height: 1121px;
+        height: unset;
+
+
+    }
+
+    .about-us__find-more {
+        display: inline-block;
+        margin-bottom: 58px;
+    }
+
+    .about-us__info {
+        margin-bottom: 60px;
+    }
+
+    .about-us__main-image {
+        position: initial;
+        height: 478px;
+
+    }
+
+    .about-us__image {
+        width: 33%;
+    }
+
+    .about-us__image-group {
+
+        position: relative;
+        right: auto;
+        display: flex;
+
+    }
+
+    .about-us__menu-item:last-child {
+        display: none;
+    }
+
+
+    .on-map {
+        height: 726px;
+        padding: 60px 40px;
+
+    }
+
+    .on-map__content {
+        padding-left: 0;
+        flex-direction: column;
+    }
+
+    .on-map__map {
+        width: 100%;
+        height: 450px;
+
+    }
+
+    .on-map__menu {
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-right: 0;
+        flex-direction: row;
+        margin-bottom: 16px;
+    }
+
+    .features {
+        padding: 60px 40px 0 40px;
+    }
+
+
+}
+
+@media (max-width: 768px) {
+
+    .container {
+        width: 347px;
+    }
+
+    .about-us {
+        min-height: 1433px;
+        height: unset;
+    }
+
+    .about-us__content {
+        min-height: 1045px;
+        height: unset;
+    }
+
+    .about-us__find-more {
+        margin-bottom: 48px;
+    }
+
+    .about-us__title {
+        margin-bottom: 40px;
+        width: 349px;
+    }
+
+    .about-us__description {
+        width: 347px;
+    }
+
+    .about-us__menu-item:last-child {
+        display: none;
+    }
+
+    .about-us__menu {
+        flex-direction: row;
+        row-gap: 34px;
+        column-gap: 30px;
+    }
+
+    .about-us__info {
+        row-gap: 30px;
+
+        flex-direction: column;
+
+    }
+
+    .about-us__image-group {
+        gap: unset;
+        justify-content: space-between;
+    }
+
+    .about-us__image {
+        width: 168px;
+        max-height: 180px;
+
+    }
+
+    .features__carouesel-buttons {
+        display: none;
+    }
+
+    .about-us__main-image {
+
+        width: 100%;
+        height: auto;
+
+    }
+
+    .on-map {
+        height: 700px;
+        position: relative;
+    }
+
+    .on-map__map {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -35px;
+        width: 100%;
+        height: 446px;
+    }
+}
